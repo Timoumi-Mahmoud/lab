@@ -1,0 +1,19 @@
+[
+		{
+				"id": 0,
+				"title": "Apartment in Russia",
+				"price": 1000.25	,
+				"location": "Russia, Moscow",
+				"description": "lorem ipsum ........................"
+		},
+		{
+				"id": 1,
+				"title": "Land in Japan",
+				"price": 1099.254	,
+				"location": "Japan, Tokyo",
+				"description": "lorem ipsum ........................"
+		}
+
+
+
+]
