@@ -1,0 +1,24 @@
+[
+  {
+    "id":       "ehoijfn",
+    "name":     "Berzerk",
+    "year":     1996,
+    "imageUrl": "https://google/berzerk",
+    "rate":     9.9
+  },
+  {
+    "id":       "ehoijfndkjf",
+    "name":     "Monster",
+    "year":     1990,
+    "imageUrl": "https://google/monster",
+    "rate":     9.4
+  },
+
+  {
+    "id":       "oedfdoihoijfn",
+    "name":     "Cowboy bebop",
+    "year":     1999,
+    "imageUrl": "https://google/Cowboy",
+    "rate":     8.7
+  }
+]
