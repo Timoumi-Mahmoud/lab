@@ -30,13 +30,20 @@ func main() {
 	mm := re.FindAllString(te, -1)
 	id := re.FindAllStringIndex(te, -1)
 
-	fmt.Println(mm)
-	fmt.Println(id)
+	fmt.Println("mm: ", mm)
+	fmt.Println("id: ", id)
 	fmt.Printf("type of id: %T\t, type of mm: %T\n", id, mm)
 
 	up := re.ReplaceAllStringFunc(te, strings.ToUpper)
 	fmt.Println(up)
+	fmt.Println("UUID valiation")
+	uure := `[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}`
+	ufmt := regexp.MustCompile(uure)
 
+	ustr := "072665ee-a034-4cc3-a2e8-9f1822c4ebbb"
+	if !ufmt.MatchString(ustr) {
+		fmt.Printf("%s is not a UUID", ustr)
+	}
 }
 
 /*
