@@ -1,0 +1,4 @@
+2025/04/13 17:40:04 main.go:18: vim go
+INFO: 2025/04/13 17:48:32 main.go:27: This is info
+WARNING: 2025/04/13 17:48:32 main.go:28: This is very important
+ERROR: 2025/04/13 17:48:32 main.go:29: Something went wrong
