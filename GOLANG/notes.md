@@ -89,3 +89,4 @@ slice				vs					Array
 -------------------------------------
 # Closure
 - function uses variables from another function scope( outer function)
+
