@@ -68,7 +68,7 @@ func main() {
 	isPresent[2] = true
 	fmt.Println("isPresent: ", isPresent)
 
-	isPresentWithStruct := map[int]struct{}{} // a set typ (instead of bool)
+	isPresentWithStruct := map[int]struct{}{} // a set type (instead of bool)
 	isPresentWithStruct[1] = emptyStruct{}
 	isPresentWithStruct[1] = emptyStruct{}
 	isPresentWithStruct[3] = emptyStruct{}

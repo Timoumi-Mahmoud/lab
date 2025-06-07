@@ -14,7 +14,6 @@ func main() {
 	scan.Split(bufio.ScanWords)
 
 	for scan.Scan() {
-		//fmt.Println("scan:", scan.Text())
 		words[scan.Text()]++
 	}
 	fmt.Println("words", words)
@@ -27,12 +26,11 @@ func main() {
 		ss = append(ss, kv{k, v})
 	}
 
-	fmt.Println("ss is :", ss)
 	sort.Slice(ss, func(i, j int) bool {
 		return ss[i].val > ss[j].val
 	})
 
-	for _, s := range ss[:3] {
+	for _, s := range ss[:] {
 		fmt.Println(s.key, "appears", s.val, "times")
 	}
 }

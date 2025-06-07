@@ -7,8 +7,10 @@ import (
 
 func main() {
 	s := "èlite"
+	fmt.Println("s", s[3])
+	sv := "lite"
+	fmt.Println("sv", sv[3])
 
-	fmt.Println("vim-go", s[3])
 	fmt.Printf("%44T %[1]v\n", s)
 	fmt.Printf("%4T %[1]v , len: %d\n", []rune(s), len(s))
 
@@ -39,8 +41,6 @@ func main() {
 	)
 
 	f = strings.ToUpper(f)
-	//create new chunk of memory and upper case the string f, (different location in memory),
-	// and for the initial value of f that is still in the memory the garbage collector of go will take care of it.
 	fmt.Println(f)
 	fSlice := []string{f}
 

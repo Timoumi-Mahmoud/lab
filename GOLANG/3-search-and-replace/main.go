@@ -16,7 +16,7 @@ func main() {
 
 	old, new := os.Args[1], os.Args[2]
 
-	fmt.Println("vim-go", old, new)
+	fmt.Println(old, new)
 	scan := bufio.NewScanner(os.Stdin)
 
 	for scan.Scan() {

@@ -42,34 +42,34 @@ rather than storing all these dependencies in global variable, a neat approach i
     - I don't need to mock the database
 * Using the same approach I can use closure in DI
 ```go
-        http.Handle("/books", booksIndex(env))
+http.Handle("/books", booksIndex(env))
 // Use a closure to make Env available to the handler logic.
 func booksIndex(env *Env) http.HandlerFunc {
-    return func(w http.ResponseWriter, r *http.Request) {
-            bks, err := models.AllBooks(env.db)
-            ..... }
+  return func(w http.ResponseWriter, r *http.Request) {
+    bks, err := models.AllBooks(env.db)
+      ..... }
 ```
 
 3. Wrapping the connection pool
 Dependency injection but wrapping the sql.DB connection pool in my own custom type.
 ```go
 type BookModel struct {
-    DB *sql.DB
-    }
-    func (m BookModel) All() ([]Book, error) {
-        rows, err := m.DB.Query("SELECT * FROM books")
-        ....}
+  DB *sql.DB
+}
+func (m BookModel) All() ([]Book, error) {
+  rows, err := m.DB.Query("SELECT * FROM books")
+    ....}
     // main.go
     type Env struct{
-        books models.BookModel
-        }
-        db, err := sql.open("","")
-        env :=&Env{
-            books: models.BookModel{DB: db}
-            }
-            func (env *Env) booksList(w http.ResponseWriter, r *http.Request) {
-            bks, err := env.books.GetAll()
-            .....}
+      books models.BookModel
+    }
+db, err := sql.open("","")
+env :=&Env{
+books: models.BookModel{DB: db}
+}
+func (env *Env) booksList(w http.ResponseWriter, r *http.Request) {
+  bks, err := env.books.GetAll()
+    .....}
 ```
     - Good for complex application
     - Ability to create mock implementation to my BookModel which I can use during testing

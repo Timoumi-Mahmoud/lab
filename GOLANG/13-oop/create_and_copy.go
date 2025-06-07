@@ -21,7 +21,6 @@ func (b *ByteCounter) Write(p []byte) (int, error) {
 	return l, nil
 }
 func main() {
-	fmt.Println("vim-go")
 	var c ByteCounter
 
 	f1, err := os.Open("a.txt")

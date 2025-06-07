@@ -20,6 +20,8 @@ func main() {
 	w1 := Widget{ID: 0, Count: 1}
 	Expend(&w1)
 	Expend(&w1)
+	Expend(&w1)
+	Expend(&w1)
 
 	fmt.Println("w: ", w1)
 
@@ -64,13 +66,13 @@ func main() {
 
 /*
 
-Pointer						values
+Pointer													values
 shared, not copied          Copied, not shared
 
 Common uses of pointers:
 	- some objects can't be copied safely (mutex)
 	- some objects are too large to copy efficiently (consider pointers when size > 64 bytes )
-	- some methods need to change (mutate) the receiver [later!]
+	- some methods need to change (mutate) the receiver
 	- when decoding protocol data into an object (JSON, etc; often in a variable argument list)
 	var r response
 	err:= json.Unmrshal (j, &r)
@@ -83,6 +85,7 @@ Common uses of pointers:
 - stack allocation is more efficient
 - Accessing a variable directly is more efficient than following a pointer.
 - Accessing a dense sequence of data is more efficient than sparse data(and array  is faster than a linked list, etc)
+
 =>Heap allocation
 Go would prefer to allocate on the stack, but sometimes can't:
 	- a func returns a pointer to a local object

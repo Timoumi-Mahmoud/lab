@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Println("vim-go")
 	var s []int
 	t := []int{}
 	u := make([]int, 5)    //len = 5

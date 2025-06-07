@@ -22,10 +22,15 @@ func main() {
 	a = append(a, 68)
 	a = append(a, 67)
 	b := a
+	fmt.Println("b: ", b)
+	b = append(b, 9999)
+
 	a = append(a, 1555)
 
+	fmt.Println("a: ", a)
 	d := make([]int, 5)
 
+	fmt.Println("d: ", d)
 	fmt.Println("--------------")
 	t := []byte("string")
 
@@ -58,7 +63,7 @@ func main() {
 }
 func do(a [3]int, b []int) []int {
 	a[0] = 4            // w unchanged =>>>>>>>>>> because array passed by value
-	b[0] = 3            // x changed =>>>>>>>>>>>> because slice are passed by value
+	b[0] = 3            // x changed =>>>>>>>>>>>> because slice are passed by reference
 	c := make([]int, 5) // []int{0, 0, 0, 0, 0}
 	c[4] = 42
 	copy(c, b) // copies only 3 elts

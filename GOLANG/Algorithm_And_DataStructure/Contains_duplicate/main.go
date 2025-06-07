@@ -4,16 +4,24 @@ import (
 	"fmt"
 )
 
+//	func containsDup(array []int) bool {
+//		temp_map := map[int]bool{}
+//		for _, v := range array {
+//			temp_map[v] = true
+//		}
+//		if len(temp_map) != len(array) {
+//			return true
+//		}
+//
+//		return false
+//	}
 func containsDup(array []int) bool {
 	temp_map := map[int]bool{}
 	for _, v := range array {
 		temp_map[v] = true
 	}
-	if len(temp_map) != len(array) {
-		return true
-	}
+	return len(temp_map) != len(array)
 
-	return false
 }
 
 func main() {

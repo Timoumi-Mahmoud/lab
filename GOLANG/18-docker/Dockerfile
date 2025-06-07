@@ -1,5 +1,4 @@
 FROM golang:1.23.5 AS dev
-
 WORKDIR /work
 
 FROM golang:1.23.5 AS build

@@ -72,6 +72,4 @@ type Filenamer interface {
 struct composition : build struct from other struct
 composition not inheritance
 
-
-
 */

@@ -8,6 +8,7 @@ import (
 type Point struct {
 	X, Y float64
 }
+
 type Line struct {
 	Begin, End Point
 }
