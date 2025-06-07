@@ -41,4 +41,5 @@ $ cat Part1.sql  | docker exec -i postgres15 psql -U root -d exercises
 
 $ cat PartOne-Basic.sql | docker exec -i postgres15 psql -U root -d exercises
 $ cat PartTwo-Joins-And-Subqueries.sql | docker exec -i postgres15 psql -U root -d exercises
+$ cat PartThree-Modifying-Data.sql | docker exec -i postgres15 psql -U root -d exercises
 ```
