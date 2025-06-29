@@ -9,8 +9,8 @@
 
 ```go
 funcMap := map[string]interface{}{
-		"toUpper": strings.ToUpper,
-	}
+  "toUpper": strings.ToUpper,
+}
 /// in the template:
 {{ toUpper .Title }}
 
