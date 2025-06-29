@@ -36,3 +36,7 @@ $				    Matches the end of a line
 { n }			  Matches exactly n instances of the preceding element
 { min, }		Matches at least min instances (note the comma)
 { min,max }	Matches any number of instances from min to max
+
+
+
+find . -type f -exec mv '{}' '{}'.jpg \;

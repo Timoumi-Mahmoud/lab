@@ -14,6 +14,5 @@ else
 		echo "Error while creating user!"
 fi
 
-rx=$(ifconfig $net | grep "RX packets" | awk '{print $3 $6 $7}')
 
 
