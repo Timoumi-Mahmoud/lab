@@ -41,30 +41,42 @@ curl parrot.live
 ------------------------------------------------------------------------------------
 ## Test APIs
 #### GET:
-- curl localhost:4000/v1/healthcheck
-- curl -v localhost:4000/v1/healthcheck -X GET
-- curl -s localhost:4000/v1/healthcheck -o /dev/null -w '%{response_code}'
+```bash
+ curl localhost:4000/v1/healthcheck
+ curl -v localhost:4000/v1/healthcheck -X GET
+ curl -s localhost:4000/v1/healthcheck -o /dev/null -w '%{response_code}'
+```
 
-- curl -I localhost:4000/v1/healthcheck  -X GET
+```bash
+ curl -I localhost:4000/v1/healthcheck  -X GET
+```
+
 #### POST
-- curl -X POST -d'{email:bara@gmail, password: secretPWD}' localhost:4000/v1/login -H 'content-type: application/json'
-- curl -d'{email:bara@gmail, password: secretPWD}' localhost:4000/v1/login (only works for POST for other method like patch and put I need to add -X PUT)
-- curl -d @file_name.json  localhost:4000/v1/login
-
+ curl -X POST -d'{email:bara@gmail, password: secretPWD}' localhost:4000/v1/login -H 'content-type: application/json'
+ curl -d'{email:bara@gmail, password: secretPWD}' localhost:4000/v1/login (only works for POST for other method like patch and put I need to add -X PUT)
+ curl -d @file_name.json  localhost:4000/v1/login
+```
 #### PUT
-- curl -X PUT -d'{first_name:bara, last_name:hacker, email:bara@gmail, password: secretPWD}' localhost:4000/v1/user/create
+```bash
+ curl -X PUT -d'{first_name:bara, last_name:hacker, email:bara@gmail, password: secretPWD}' localhost:4000/v1/user/create
+```
 
 #### DELETE
-- curl -X DELETE localhost:4000/v1/user/delete/1
+```bash
+ curl -X DELETE localhost:4000/v1/user/delete/1
+```
 
 #### HEAD
-- curl -I localhost:4000/v1/healthcheck
+```bash
+ curl -I localhost:4000/v1/healthcheck
+```
 
 #### Autorization
 
-- curl localhost:4000/v1/admin -u admin:secret
-- curl localhost:4000/v1/admin -H  "Autorization: Basic $(echo -n admin:secret | base64)"
-
+```bash
+ curl localhost:4000/v1/admin -u admin:secret
+ curl localhost:4000/v1/admin -H  "Autorization: Basic $(echo -n admin:secret | base64)"
+```
 
 
 
@@ -73,3 +85,9 @@ s: silent
 v: verbose
 I: inspect
 H: Header
+X: request
+O: remote-name
+d: data
+E: certificate
+L: location 
+D: dump-header
