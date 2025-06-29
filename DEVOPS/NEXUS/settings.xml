@@ -1,0 +1,9 @@
+<settings>
+		<servers>
+				<server>
+						<id>nexus-snapshots</id>
+						<username>mahmoud</username>
+						<password>0000@Lambda</password>
+				</server>
+		</servers>
+</settings>

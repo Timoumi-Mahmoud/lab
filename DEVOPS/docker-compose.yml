@@ -1,0 +1,14 @@
+version: '3'
+services:
+  jenkinsServer:
+    image: jenkins/jenkins:lts
+    ports:
+     - 8080:8080
+     - 5000:5000
+    environment:
+     - Username: "mahmoud"
+    volumes:
+     - jenkins_home:/var/jenkins_home
+volumes: 
+    jenkins_home:
+
